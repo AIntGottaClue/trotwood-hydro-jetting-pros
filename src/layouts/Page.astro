@@ -9,7 +9,7 @@ const desc=page.description||'Hydro jetting information and service requests for
 const HOODS={'westbrooke-village':'Westbrooke Village','shiloh-springs':'Shiloh Springs Road','main-street-corridor':'Main Street Corridor','salem-mall-wolf-creek':'Salem Mall and Wolf Creek Pike'};
 const SVCS={'severe-grease-and-sludge':'Severe Grease and Sludge','tree-root-intrusions':'Tree Root Intrusions','recurring-clogs-and-slow-drains':'Recurring Clogs and Slow Drains','mineral-and-scale-deposits':'Mineral and Scale Deposits','preventative-maintenance':'Preventative Maintenance'};
 const crumbs=[['Home',origin]];
-if(HOODS[slug]){crumbs.push(['Service Areas',origin+'service-areas/']);crumbs.push([HOODS[slug],origin+slug+'/']);}else if(SVCS[slug]){crumbs.push(['Services',origin+'services/']);crumbs.push([SVCS[slug],origin+slug+'/']);}
+if(HOODS[slug]){crumbs.push(['Neighborhoods',origin+'service-areas/']);crumbs.push([HOODS[slug],origin+slug+'/']);}else if(SVCS[slug]){crumbs.push(['Services',origin+'services/']);crumbs.push([SVCS[slug],origin+slug+'/']);}
 const areaName=HOODS[slug]?HOODS[slug]+', Trotwood, Ohio':'Trotwood, Ohio';
 const schema={'@context':'https://schema.org','@graph':[{'@type':'Organization','@id':origin+'#organization',name:c.brand,url:origin,telephone:c.phoneDisplay,areaServed:{'@type':'City',name:'Trotwood, Ohio'}},{'@type':'WebPage',name:title,url:origin+(slug==='index'?'':slug+'/'),about:{'@id':origin+'#organization'}}]};
 if(!['privacy','terms','contact','service-areas'].includes(slug)) schema['@graph'].push({'@type':'Service',name:title,serviceType:'Hydro jetting information and requests',provider:{'@id':origin+'#organization'},areaServed:{'@type':HOODS[slug]?'Place':'City',name:areaName}});
