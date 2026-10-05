@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://greenhydrojetting.prosapp.site/sitemap.xml
+
+Sitemap: https://trotwoodhydrojetting.prosapp.site/sitemap.xml
