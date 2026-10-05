@@ -93,6 +93,9 @@ header:has([aria-expanded="true"]){z-index:2001!important}
 [aria-expanded="true"]>.mobile-menu-hamburger{display:none!important}
 [aria-expanded="true"]>.mobile-menu-x{display:block!important}
 .mobile-menu-hamburger,.mobile-menu-x{flex:none;vertical-align:middle}
+/* Menu icons: no square around hamburger/X. */
+button[data-menu-toggle],button[data-menu],button[data-burger],button[data-mobile-menu],button.menu,button.menu-toggle,button.menu-btn,button.burger,.menu-toggle,.menu-btn,.burger{border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;outline:0}
+button[data-menu-toggle]:focus-visible,button[data-menu]:focus-visible,button[data-mobile-menu]:focus-visible,button[data-burger]:focus-visible,button.menu:focus-visible,button.menu-toggle:focus-visible,button.menu-btn:focus-visible,button.burger:focus-visible{outline:2px solid currentColor!important;outline-offset:4px}
 button[data-menu-toggle],button[data-menu],button[data-burger],button[data-mobile-menu],button.menu{min-width:44px;min-height:44px;align-items:center;justify-content:center}
 button[data-menu-toggle]:focus-visible,button[data-menu]:focus-visible,button[data-mobile-menu]:focus-visible,button[data-burger]:focus-visible,button.menu:focus-visible{outline:2px solid currentColor;outline-offset:4px}
 .mobile-nav,.sat-mobile-panel,#mobile-menu,.mobile-panel{max-height:calc(100dvh - 100px);overflow-y:auto;overscroll-behavior:contain}
