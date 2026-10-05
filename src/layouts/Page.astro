@@ -85,3 +85,17 @@ html,body{overflow-x:clip}
 <style is:global>#request-form,#contact{scroll-margin-top:150px}.new-content-section h2{overflow-wrap:break-word}</style>
 
 <style is:global>.sat-mobile-panel{background:#0a0c10!important}.sat-mobile-panel a,.sat-mobile-panel summary{color:#e8eef2}.sat-mobile-panel .sat-nav-call{color:#071015}@media(min-width:1024px){header .sat-desktop-nav{gap:14px;font-size:12px}}</style>
+
+<style is:global>
+/* Mobile menu sits above fixed call CTAs. Icons track aria-expanded. */
+header:has([aria-expanded="true"]){z-index:2001!important}
+.mobile-menu-x{display:none!important}
+[aria-expanded="true"]>.mobile-menu-hamburger{display:none!important}
+[aria-expanded="true"]>.mobile-menu-x{display:block!important}
+.mobile-menu-hamburger,.mobile-menu-x{flex:none;vertical-align:middle}
+button[data-menu-toggle],button[data-menu],button[data-burger],button[data-mobile-menu],button.menu{min-width:44px;min-height:44px;align-items:center;justify-content:center}
+button[data-menu-toggle]:focus-visible,button[data-menu]:focus-visible,button[data-mobile-menu]:focus-visible,button[data-burger]:focus-visible,button.menu:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.mobile-nav,.sat-mobile-panel,#mobile-menu,.mobile-panel{max-height:calc(100dvh - 100px);overflow-y:auto;overscroll-behavior:contain}
+@media(max-width:1100px){header:has([aria-expanded="true"]){position:sticky;top:0}}
+
+</style>
