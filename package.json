@@ -1,0 +1,11 @@
+{
+  "name": "trotwood-hydro-jetting-pros",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "astro build"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  }
+}
